@@ -1,0 +1,386 @@
+/* ================================
+   GENERAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #222222;
+}
+
+
+/* ================================
+   NAVBAR
+================================ */
+
+#navbar {
+    width: 100%;
+    height: 80px;
+
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* Logo */
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #222222;
+}
+
+
+/* Menu */
+
+.menu {
+    display: flex;
+    gap: 35px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #555555;
+    font-size: 15px;
+}
+
+.menu a:hover {
+    color: #000000;
+}
+
+
+/* Navbar Buttons */
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.login-btn,
+.signup-btn {
+    padding: 10px 20px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: white;
+
+    border: 1px solid #dddddd;
+
+    color: #333333;
+}
+
+.signup-btn {
+    background-color: #111111;
+
+    border: 1px solid #111111;
+
+    color: white;
+}
+
+
+/* ================================
+   TEAM SECTION
+================================ */
+
+#team {
+    width: 100%;
+
+    padding: 80px 7%;
+
+    background-color: #fafafa;
+}
+
+
+/* Team Header */
+
+.team-header {
+    width: 650px;
+
+    max-width: 100%;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+.team-header h1 {
+    font-size: 48px;
+
+    margin-bottom: 15px;
+
+    color: #181818;
+}
+
+.team-header p {
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color: #777777;
+}
+
+
+/* ================================
+   TEAM GRID
+================================ */
+
+.team-grid {
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+/* ================================
+   TEAM CARD
+================================ */
+
+.team-card {
+    background-color: #ffffff;
+
+    border: 1px solid #e7e7e7;
+
+    border-radius: 14px;
+
+    padding: 12px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Team Image */
+
+.team-card img {
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    display: block;
+}
+
+
+/* Member Information */
+
+.member-info {
+    padding: 18px 8px 10px;
+}
+
+.member-info h3 {
+    font-size: 18px;
+
+    margin-bottom: 7px;
+
+    color: #222222;
+}
+
+.member-info p {
+    font-size: 14px;
+
+    color: #777777;
+}
+
+
+/* ================================
+   CTA SECTION
+================================ */
+
+#cta {
+    width: 100%;
+
+    padding: 80px 7%;
+
+    background-color: #f1f4ff;
+}
+
+.cta-content {
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 32px;
+
+    line-height: 1.4;
+
+    margin-bottom: 30px;
+
+    color: #1d1d1d;
+}
+
+
+/* Email Box */
+
+.email-box {
+    max-width: 600px;
+
+    margin: auto;
+
+    padding: 7px;
+
+    display: flex;
+
+    background-color: white;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 10px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.email-box input {
+    flex: 1;
+
+    width: 100%;
+
+    height: 45px;
+
+    padding: 0 15px;
+
+    border: none;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+.email-box button {
+    padding: 0 25px;
+
+    background-color: #111111;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+.email-box button:hover {
+    background-color: #333333;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1000px) {
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    #navbar {
+        height: auto;
+
+        padding: 20px;
+
+        flex-wrap: wrap;
+
+        gap: 20px;
+    }
+
+    .menu {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-header h1 {
+        font-size: 38px;
+    }
+
+    .email-box {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .email-box button {
+        height: 45px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .nav-buttons {
+        display: none;
+    }
+
+    #team {
+        padding: 50px 5%;
+    }
+
+    #cta {
+        padding: 50px 5%;
+    }
+
+    .team-card img {
+        height: 300px;
+    }
+
+}
